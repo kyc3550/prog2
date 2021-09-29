@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>장안구 알바정보</title>
+<h1>알바몬 경기도 수원시 장안구의 알바정보</h1>
+<h4>크롤링해온 알바정보는 {{cnt}}개 입니다.</h4>
+</head>
+<body>
+    <table border="1">
+        {% for th in ths %}
+	    <th>{{th}}</th>
+        {% endfor %}
+		{% for data in alba_data %}
+		<tr>
+			{% for detail in data %}
+				<td>{{detail}}</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+    </table>
+</body>
+</html>
