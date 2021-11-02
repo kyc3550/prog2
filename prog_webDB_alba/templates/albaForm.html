@@ -1,27 +1,33 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
-<form method="post" action="/insert">
+<h2>지역별 알바찾기</h2> 
+<form method="post" action="/find_alba">
     <div>
-        <input type="radio" name="loc" value="kungki">경기
+        <input type="radio" name="loc" value="경기">경기
     </div>
 
     <div>
         <label>지역</label>
         <select name = "location" size="3">
-            <option value = "suwon">수원시</option>
+            <option value = "수원시">수원시</option>
         </select>
     </div>
     <div>
         <label>세부 지역</label>
         <select name = "detail_location" size="3">
-            <option value = "jangan">장안구</option>
+            <option value = "장안구">장안구</option>
+            
         </select>
     </div>
     <div class='button'>
         <input type="submit" value="전송">
         <input type="reset" value="취소">
+    </div>
+</form>
+<form action="/scrap">
+    <div>
+        <input type="submit" value="스크랩알바 보기"> <br>
     </div>
 </form> 
 {% endblock %}
